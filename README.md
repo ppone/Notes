@@ -3,12 +3,13 @@ Notes
 
 Notes for installing, upgrading, maintaining, various tools.
 
-MySql
+MySQL
 =====
 
 Set up databases to run AS YOUR USER ACCOUNT with:   
-    unset TMPDIR   
-    mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+<code>    unset TMPDIR   
+    mysql_install_db --verbose --user="$(whoami)" --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+</code>
 
 To set up base tables in another folder, or use a different user to run
 mysqld, view the help for mysqld_install_db:   
